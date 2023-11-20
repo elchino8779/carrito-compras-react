@@ -1,0 +1,152 @@
+.article {
+  width: 85%;
+  height: 600px;
+  padding: 20px;
+  margin-top: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(89deg, #1e2833 0%, #202b38 100%);
+  border-left: 10px solid #dfd4c7;
+
+  .texts {
+    width: 60%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    animation: fadein-text;
+    animation-duration: 2s;
+    animation-iteration-count: initial;
+
+    h2 {
+      font-size: 3rem;
+      margin: 0;
+      color: #678491;
+      text-align: center;
+    }
+
+    h3 {
+      text-align: center;
+      margin: 0;
+      color: #678491;
+    }
+
+    .link-article {
+      width: 150px;
+      height: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 19px;
+      background: linear-gradient(145deg, #202b37, #1b242e);
+      box-shadow: 7px 7px 7px #141a21,
+        -7px -7px 7px #293645;
+      transition: 1s;
+      border: 1px solid #dfd4c7;
+      transition: 0.1s;
+
+      &:active {
+        transform: scale(0.95);
+      }
+
+      p {
+        color: #dfd4c7;
+        font-size: 1.1rem;
+      }
+    }
+
+    a {
+      text-decoration: none;
+    }
+  }
+
+  .img-content {
+    width: 40%;
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.left-invert {
+  border-left: none;
+  border-right: 10px solid #dfd4c7;
+  flex-direction: row-reverse;
+  background: linear-gradient(89deg, #202b38 0%, #1e2833 100%);
+}
+
+
+@keyframes fadein-text {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+@media (max-width: 1200px) {
+
+  .article {
+    height: 350px;
+
+    .texts {
+      width: 70%;
+
+      h2 {
+        font-size: 1.7rem;
+      }
+
+      h3 {
+        font-size: 1rem;
+      }
+
+      .link-article {
+
+        width: 110px;
+        height: 40px;
+
+        p {
+          font-size: 0.8rem;
+        }
+      }
+    }
+
+    .img-content {
+      width: 30%;
+      height: 60%;
+    }
+  }
+}
+
+@media (max-width: 770px){
+  .article{
+    width: 100%;
+    border: none;
+  }
+}
+
+@media (max-width: 620px){
+  .article{
+    flex-direction: column-reverse;
+    height: 700px;
+
+    .texts{
+      width: 90%;
+    }
+
+    .img-content {
+      width: 40%;
+      height: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
